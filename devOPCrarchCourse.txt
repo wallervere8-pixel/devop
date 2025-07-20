@@ -46,8 +46,8 @@ app-hosting appid guestshell
    memory 512
 end
 
-UNANGTELNET:  guestshell enable
-2NDtELNET:    guestshell run python
+UNANGTELNET enables DOCKERization on Cisco:  guestshell enable
+2NDtELNET run python DOCKER via Redhat on Cisco:    guestshell run python3
 THIRDTELNET:  guestshell run bash
 
 
