@@ -44,8 +44,8 @@ R1#
 A user executed script that prompts you for a number of loopbacks to create.
 
 config t
-no event manager applet makeloop
-event manager applet makeloop
+no event manager applet gawaloopback
+event manager applet gawaloopback
  event none
  action 1.0 puts "How many Loopback interfaces do you wish to create?"
  action 1.1 puts nonewline "> "
@@ -61,7 +61,7 @@ event manager applet makeloop
  action 4.0 cli command "end"
  end
 
-event manager run CreateLoopbacks
+event manager run gawaloopback
 
 removing loopbacks:
 config t
@@ -81,7 +81,7 @@ event manager applet siraloop
  action 4.0 cli command "end"
  end
 
-event manager run RemoveLoopbacks
+event manager run siraloop
 
 @@@@@@@ example4 @@@@@@@@@
 
@@ -169,6 +169,7 @@ namespace eval ::cisco {
 }
 set body [exec sh run interface | in shut]
 ::cisco::send_email rivancorp@gmail.com rivancorp@gmail.com "Interface Down" $body
+
 
 
 
